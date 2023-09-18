@@ -3368,11 +3368,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Visual Studio Files\\Product_Management_System\\PMS.API\\PMS.API\\PMS.API.csproj",
+      "projectUniqueName": "D:\\Desktop\\MyProduct\\Product\\PMS.API\\PMS.API\\PMS.API.csproj",
       "projectName": "PMS.API",
-      "projectPath": "D:\\Documents\\Visual Studio Files\\Product_Management_System\\PMS.API\\PMS.API\\PMS.API.csproj",
+      "projectPath": "D:\\Desktop\\MyProduct\\Product\\PMS.API\\PMS.API\\PMS.API.csproj",
       "packagesPath": "C:\\Users\\canit\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Visual Studio Files\\Product_Management_System\\PMS.API\\PMS.API\\obj\\",
+      "outputPath": "D:\\Desktop\\MyProduct\\Product\\PMS.API\\PMS.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\canit\\AppData\\Roaming\\NuGet\\NuGet.Config",

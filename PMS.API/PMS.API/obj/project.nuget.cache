@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "drEzZ7Bq2oshpQHQ5uzxBO02xeD1oRWDA/3XxihAPygsYaBMgPbYRRuXo3Bbhplaj7/liCoifj1z52Hc8o918A==",
+  "dgSpecHash": "2Smfvpi0JgPWjOeHstgYpxlFU9AakIZf4tGH3qgK1v/dOFgUUSQD8oy4Qx43g5KO37TKsWj2R4PeQTMlDBY3Mw==",
   "success": true,
-  "projectFilePath": "D:\\Documents\\Visual Studio Files\\Product_Management_System\\PMS.API\\PMS.API\\PMS.API.csproj",
+  "projectFilePath": "D:\\Desktop\\MyProduct\\Product\\PMS.API\\PMS.API\\PMS.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\canit\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\canit\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

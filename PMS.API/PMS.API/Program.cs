@@ -17,7 +17,7 @@ builder.Services.AddDbContext<PMSDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PMSDbConnectionString")));
 
 var app = builder.Build();
-
+//deneme API
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

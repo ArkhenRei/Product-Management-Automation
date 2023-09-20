@@ -174,3 +174,4 @@ D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\refint\PMS.API.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.pdb
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.genruntimeconfig.cache
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\ref\PMS.API.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

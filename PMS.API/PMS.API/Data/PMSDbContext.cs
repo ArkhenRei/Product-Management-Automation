@@ -5,7 +5,7 @@ namespace PMS.API.Data
 {
     public class PMSDbContext : DbContext
     {
-        public PMSDbContext(DbContextOptions options) : base(options) { }
+        public PMSDbContext(DbContextOptions<PMSDbContext> options) : base(options) { }
 
         public DbSet<Product> Products { get; set; }
     }

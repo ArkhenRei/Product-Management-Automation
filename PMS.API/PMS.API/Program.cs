@@ -16,6 +16,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PMSDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("PMSDbConnectionString")));
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDbConnStr"));
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

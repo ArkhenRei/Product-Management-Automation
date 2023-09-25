@@ -6,23 +6,28 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductsComponent
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
   {
     path: 'products',
-    component: ProductsComponent
+    component: ProductsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'products/add',
-    component: AddProductComponent
+    component: AddProductComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'products/edit/:id',
-    component: EditProductComponent
+    component: EditProductComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -34,7 +39,8 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!--
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">Product Management System</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,15 +13,22 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['products','add']">Add Product</a>
         </li>
+        <li class="nav-item">
+          <button (click)="logout()" class="btn btn-outline-danger" type="button">Logout</button>
+        </li>
       </ul>
     </div>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <button (click)="logout()" class="btn btn-outline-danger" type="button">Logout</button>
-      </li>
-    </ul>
+    <div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <h4>Hello, {{fullName}}</h4>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
-
+-->
+<app-header [fullName]="fullName"></app-header>
+    
 <router-outlet></router-outlet>
 <ng-toast></ng-toast>

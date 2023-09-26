@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './services/auth.service';
+import { UserStoreService } from './services/user-store.service';
 
 
 @Component({
@@ -9,12 +10,19 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'PMS.UI';
 
-  constructor(private auth: AuthService){}
+  public fullName : string = "";
+  constructor(private auth: AuthService, private userStore: UserStoreService){}
 
-  logout(){
-    this.auth.signOut();
+  ngOnInit(){
+    this.userStore.getFullNameFromStore()
+    .subscribe(val=>{
+      let fullNameFromToken = this.auth.getFullNameFromToken();
+      this.fullName = val || fullNameFromToken
+    })
   }
+
+  
 }

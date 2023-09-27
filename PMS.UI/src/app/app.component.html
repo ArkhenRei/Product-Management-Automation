@@ -28,7 +28,9 @@
   </div>
 </nav>
 -->
-<app-header [fullName]="fullName"></app-header>
+<app-header *ngIf="showHeader" [fullName]="fullName"></app-header>
+<app-sidebar *ngIf="showHeader" [role]="role" ></app-sidebar>
+
     
 <router-outlet></router-outlet>
 <ng-toast></ng-toast>

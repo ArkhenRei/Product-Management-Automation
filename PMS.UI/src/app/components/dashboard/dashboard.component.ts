@@ -21,11 +21,11 @@ export class DashboardComponent implements OnInit{
       this.users = res;
     })
 
-    this.userStore.getRoleFromStore()
+    /* this.userStore.getRoleFromStore()
     .subscribe(val=>{
       const roleFromToken = this.auth.getRoleFromToken();
       this.role = val || roleFromToken;
-    })
+    }) */
 
     /**this.userStore.getFullNameFromStore()
     .subscribe(val=>{

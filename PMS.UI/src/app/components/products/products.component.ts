@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit{
   }
 
   deleteProduct(id: string){
-    if(confirm("Silmek istiyor musunuz?")){
+    if(confirm("Delete product?")){
     this.productService.deleteProduct(id)
       .subscribe({
         next: (response) => {

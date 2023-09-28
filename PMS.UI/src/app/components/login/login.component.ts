@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
   type: string = "password";
   isText: boolean = false;
   eyeIcon: string = "fa-eye-slash";
+  public resetPasswordEmail!: string;
+  public isValidEmail!: boolean;
+
   loginForm!: FormGroup;
   constructor(
     private fb: FormBuilder, 
@@ -63,6 +66,23 @@ export class LoginComponent implements OnInit {
       //throw the error using toaster and with required fields
       ValidateForm.validateAllFormFields(this.loginForm);
       alert("your form is invalid")
+    }
+  }
+
+  checkValidEmail(event: string){
+    const value = event;
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
+    this.isValidEmail = emailRegex.test(value);
+    return this.isValidEmail;
+  }
+
+  confirmToSend(){
+    if(this.checkValidEmail(this.resetPasswordEmail)){
+      console.log(this.resetPasswordEmail);
+      this.resetPasswordEmail = "";
+      const buttonRef = document.getElementById("closeBtn");
+      buttonRef?.click();
+
     }
   }
   

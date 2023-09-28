@@ -15,6 +15,8 @@ namespace PMS.API.Models
         public string? Role { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime RefreshTokenExpireTime { get; set; }
+        public string? ResetPasswordToken { get; set; }
+        public DateTime ResetPasswordExpire { get; set; }
 
     }
 }

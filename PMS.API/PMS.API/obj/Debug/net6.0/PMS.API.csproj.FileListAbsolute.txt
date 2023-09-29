@@ -175,3 +175,7 @@ D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.pdb
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.genruntimeconfig.cache
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\ref\PMS.API.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\MailKit.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\MimeKit.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\NETCore.MailKit.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\BouncyCastle.Crypto.dll

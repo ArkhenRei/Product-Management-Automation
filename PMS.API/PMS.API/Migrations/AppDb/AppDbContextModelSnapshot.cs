@@ -48,6 +48,12 @@ namespace PMS.API.Migrations.AppDb
                     b.Property<DateTime>("RefreshTokenExpireTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("ResetPasswordExpire")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ResetPasswordToken")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");
 

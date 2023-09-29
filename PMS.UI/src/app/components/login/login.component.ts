@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from 'src/app/helpers/validateForm';
 import { AuthService } from 'src/app/services/auth.service';
+import { ResetPasswordService } from 'src/app/services/reset-password.service';
 import { UserStoreService } from 'src/app/services/user-store.service';
 
 @Component({
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
     private auth: AuthService, 
     private router: Router,
     private toast: NgToastService,
-    private userStore: UserStoreService
+    private userStore: UserStoreService,
+    private resetService: ResetPasswordService
     ) {}
 
   ngOnInit(): void {
@@ -79,10 +81,28 @@ export class LoginComponent implements OnInit {
   confirmToSend(){
     if(this.checkValidEmail(this.resetPasswordEmail)){
       console.log(this.resetPasswordEmail);
-      this.resetPasswordEmail = "";
-      const buttonRef = document.getElementById("closeBtn");
-      buttonRef?.click();
-
+      
+      //API call
+      this.resetService.sendResetPasswordLink(this.resetPasswordEmail)
+      .subscribe({
+        next:(res)=>{
+          this.toast.success({
+            detail: 'Success',
+            summary: 'Reset password success',
+            duration: 3000
+          });
+          this.resetPasswordEmail = "";
+          const buttonRef = document.getElementById("closeBtn");
+          buttonRef?.click();
+        },
+        error:(err)=>{
+          this.toast.error({
+            detail: 'ERROR',
+            summary: 'Something went wrong!',
+            duration: 3000
+          });
+        }
+      })
     }
   }
   

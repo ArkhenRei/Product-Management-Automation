@@ -11,6 +11,7 @@ namespace PMS.API.UtilityService
         {
             _config = configuration;
         }
+        //Send email to the user to reset password
         public void SendEmail(EmailModel emailModel)
         {
             var emailMessage = new MimeMessage();

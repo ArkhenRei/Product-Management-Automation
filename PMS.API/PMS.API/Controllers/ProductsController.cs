@@ -34,7 +34,7 @@ namespace PMS.API.Controllers
             await _pmsDbContext.SaveChangesAsync();
             return Ok(product);
         }
-
+        
         [HttpGet]
         [Route("{id:Guid}")]
         public async Task<IActionResult> GetProduct(Guid id)

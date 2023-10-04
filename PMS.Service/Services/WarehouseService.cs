@@ -13,10 +13,10 @@ namespace PMS.Service.Services
             _context = context;
         }
 
-        public async Task<Warehouse> GetAllWarehouses()
+        public async Task<List<Warehouse>> GetAllWarehouses()
         {
             var warehouses = await _context.Warehouses.ToListAsync();
-            return warehouses.FirstOrDefault();
+            return warehouses;
         }
 
         public async Task<Warehouse> AddWarehouse(Warehouse warehouse)

@@ -19,10 +19,10 @@ namespace PMS.API.Controllers
         }
 
         [HttpGet("warehouses")]
-        public async Task<ActionResult<List<Warehouse>>> GetAllWarehouses()
+        public async Task<IActionResult> GetAllWarehouses()
         {
             var warehouses = await _warehouseService.GetAllWarehouses();
-            return Ok(new List<Warehouse> { warehouses });
+            return Ok(warehouses);
         }
 
         [HttpPost("add-warehouse")]

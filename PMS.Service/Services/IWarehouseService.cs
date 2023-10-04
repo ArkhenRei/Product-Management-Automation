@@ -9,7 +9,7 @@ namespace PMS.Service.Services
 {
     public interface IWarehouseService
     {
-        Task<Warehouse> GetAllWarehouses();
+        Task<List<Warehouse>> GetAllWarehouses();
         Task<Warehouse> AddWarehouse(Warehouse warehouse);  
         Task<Warehouse> UpdateWarehouse(Guid id, Warehouse updateWarehouse);
         Task<Warehouse> DeleteWarehouse(Guid id);

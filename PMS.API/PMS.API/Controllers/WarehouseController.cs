@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PMS.API.Data;
 using PMS.API.Models;
+using PMS.Service.Services;
 
 namespace PMS.API.Controllers
 {
@@ -10,57 +11,47 @@ namespace PMS.API.Controllers
     [ApiController]
     public class WarehouseController : ControllerBase
     {
-        private readonly PMSDbContext _pmsDbContext;
+        private readonly WarehouseService _warehouseService;
 
-        public WarehouseController(PMSDbContext pmsDbContext)
+        public WarehouseController(IWarehouseService warehouseService)
         {
-            _pmsDbContext = pmsDbContext;
+            _warehouseService = warehouseService as WarehouseService;
         }
 
         [HttpGet("warehouses")]
-        public async Task<IActionResult> GetAllWarehouses()
+        public async Task<ActionResult<List<Warehouse>>> GetAllWarehouses()
         {
-            var warehouses = await _pmsDbContext.Warehouses.ToListAsync();
-            return Ok(warehouses);
+            var warehouses = await _warehouseService.GetAllWarehouses();
+            return Ok(new List<Warehouse> { warehouses });
         }
 
         [HttpPost("add-warehouse")]
-        public async Task<IActionResult> AddWarehouse([FromBody] WarehouseModel warehouseModel)
+        public async Task<IActionResult> AddWarehouse(Warehouse warehouse)
         {
-            await _pmsDbContext.Warehouses.AddAsync(warehouseModel);
-            await _pmsDbContext.SaveChangesAsync();
-            return Ok(warehouseModel);
+            var result = await _warehouseService.AddWarehouse(warehouse);
+            return Ok(result);
         }
 
         [HttpPut("edit-warehouse")]
-        public async Task<IActionResult> UpdateWarehouse(int id, WarehouseModel updateWarehouse)    
+        public async Task<IActionResult> UpdateWarehouse(Guid id, Warehouse updateWarehouse)
         {
-            var warehouse = await _pmsDbContext.Warehouses.FindAsync(id);
+            var result = await _warehouseService.UpdateWarehouse(id, updateWarehouse);
 
-            if (warehouse == null)
+            if (result == null)
                 return BadRequest();
-
-            warehouse.WarehouseName = updateWarehouse.WarehouseName;
-
-            await _pmsDbContext.SaveChangesAsync();
-            return Ok(warehouse);
+        
+            return Ok(result);
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteWarehouse(int id)
+        public async Task<IActionResult> DeleteWarehouse(Guid id)
         {
-            var warehouse = await _pmsDbContext.Warehouses.FindAsync(id);
-            
-            if(warehouse == null)
+            var result = await _warehouseService.DeleteWarehouse(id);
+
+            if (result == null)
                 return BadRequest();
-
-            _pmsDbContext.Warehouses.Remove(warehouse);
-            await _pmsDbContext.SaveChangesAsync();
-            return Ok(warehouse);
+            
+            return Ok(result);
         }
-
-        [HttpPost("add-product-towarehouse")]
-
-
     }
 }

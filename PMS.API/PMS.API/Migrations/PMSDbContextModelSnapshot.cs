@@ -45,15 +45,13 @@ namespace PMS.API.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("PMS.API.Models.WarehouseModel", b =>
+            modelBuilder.Entity("PMS.API.Models.Warehouse", b =>
                 {
-                    b.Property<int>("WarehouseId")
+                    b.Property<Guid>("WarehouseId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WarehouseId"));
-
-                    b.Property<int>("StoreId")
+                    b.Property<int>("Capacity")
                         .HasColumnType("int");
 
                     b.Property<string>("WarehouseName")
@@ -64,19 +62,20 @@ namespace PMS.API.Migrations
                     b.ToTable("Warehouses");
                 });
 
-            modelBuilder.Entity("PMS.API.Models.WarehouseProductsModel", b =>
+            modelBuilder.Entity("PMS.API.Models.WarehouseProduct", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<Guid>("ProductId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("InOrOut")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
-
-                    b.Property<int>("StoreId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("WarehouseId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("WarehouseId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ProductId");
 

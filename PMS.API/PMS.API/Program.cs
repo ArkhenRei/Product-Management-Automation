@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using PMS.API.Data;
 using PMS.API.Models;
 using PMS.API.UtilityService;
+using PMS.Service.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,14 +28,17 @@ builder.Services.AddCors(option =>
     });
 });
 
-builder.Services.AddDbContext<PMSDbContext>(options => 
+builder.Services.AddDbContext<PMSDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PMSDbConnectionString")));
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDbConnStr"));
 });
+
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IWarehouseProductService, WarehouseProductService>();
+builder.Services.AddScoped<IWarehouseService, WarehouseService>();
 
 builder.Services.AddAuthentication(x =>
 {
@@ -64,7 +68,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("MyPolicy"); 
+app.UseCors("MyPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();

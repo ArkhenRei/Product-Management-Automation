@@ -1,0 +1,14 @@
+D:\Desktop\MyProduct\Product\PMS.Storage\bin\Debug\net6.0\PMS.Storage.deps.json
+D:\Desktop\MyProduct\Product\PMS.Storage\bin\Debug\net6.0\PMS.Storage.runtimeconfig.json
+D:\Desktop\MyProduct\Product\PMS.Storage\bin\Debug\net6.0\PMS.Storage.dll
+D:\Desktop\MyProduct\Product\PMS.Storage\bin\Debug\net6.0\PMS.Storage.pdb
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.csproj.AssemblyReference.cache
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.AssemblyInfoInputs.cache
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.AssemblyInfo.cs
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.csproj.CoreCompileInputs.cache
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.dll
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\refint\PMS.Storage.dll
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.pdb
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\PMS.Storage.genruntimeconfig.cache
+D:\Desktop\MyProduct\Product\PMS.Storage\obj\Debug\net6.0\ref\PMS.Storage.dll

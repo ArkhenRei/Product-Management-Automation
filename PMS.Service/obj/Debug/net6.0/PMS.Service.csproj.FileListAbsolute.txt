@@ -1,0 +1,15 @@
+D:\Desktop\MyProduct\Product\PMS.Service\bin\Debug\net6.0\PMS.Service.deps.json
+D:\Desktop\MyProduct\Product\PMS.Service\bin\Debug\net6.0\PMS.Service.dll
+D:\Desktop\MyProduct\Product\PMS.Service\bin\Debug\net6.0\PMS.Service.pdb
+D:\Desktop\MyProduct\Product\PMS.Service\bin\Debug\net6.0\PMS.Storage.dll
+D:\Desktop\MyProduct\Product\PMS.Service\bin\Debug\net6.0\PMS.Storage.pdb
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.csproj.AssemblyReference.cache
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.AssemblyInfoInputs.cache
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.AssemblyInfo.cs
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.csproj.CoreCompileInputs.cache
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.csproj.CopyComplete
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.dll
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\refint\PMS.Service.dll
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\PMS.Service.pdb
+D:\Desktop\MyProduct\Product\PMS.Service\obj\Debug\net6.0\ref\PMS.Service.dll

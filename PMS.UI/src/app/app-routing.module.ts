@@ -8,6 +8,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { WarehouseComponent } from './components/warehouse/warehouse.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'reset',
     component: ResetPasswordComponent,
+  },
+  {
+    path: 'warehouse',
+    component: WarehouseComponent
   }
 ];
 

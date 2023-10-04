@@ -1266,6 +1266,34 @@
             "rid": "win"
           }
         }
+      },
+      "PMS.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "PMS.Storage": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PMS.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PMS.Service.dll": {}
+        }
+      },
+      "PMS.Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
+          "NETCore.MailKit": "2.1.0"
+        },
+        "compile": {
+          "bin/placeholder/PMS.Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PMS.Storage.dll": {}
+        }
       }
     }
   },
@@ -3611,16 +3639,26 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "PMS.Service/1.0.0": {
+      "type": "project",
+      "path": "../../PMS.Service/PMS.Service.csproj",
+      "msbuildProject": "../../PMS.Service/PMS.Service.csproj"
+    },
+    "PMS.Storage/1.0.0": {
+      "type": "project",
+      "path": "../../PMS.Storage/PMS.Storage.csproj",
+      "msbuildProject": "../../PMS.Storage/PMS.Storage.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.22",
-      "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.11",
-      "NETCore.MailKit >= 2.1.0",
+      "PMS.Service >= 1.0.0",
+      "PMS.Storage >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3650,7 +3688,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Desktop\\MyProduct\\Product\\PMS.Service\\PMS.Service.csproj": {
+              "projectPath": "D:\\Desktop\\MyProduct\\Product\\PMS.Service\\PMS.Service.csproj"
+            },
+            "D:\\Desktop\\MyProduct\\Product\\PMS.Storage\\PMS.Storage.csproj": {
+              "projectPath": "D:\\Desktop\\MyProduct\\Product\\PMS.Storage\\PMS.Storage.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -3671,10 +3716,6 @@
             "target": "Package",
             "version": "[6.0.22, )"
           },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.11, )"
-          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.11, )"
@@ -3684,10 +3725,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.11, )"
-          },
-          "NETCore.MailKit": {
-            "target": "Package",
-            "version": "[2.1.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

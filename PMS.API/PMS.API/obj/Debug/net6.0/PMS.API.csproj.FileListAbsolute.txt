@@ -97,6 +97,8 @@ D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Azure.Core.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Azure.Identity.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\BCrypt.Net-Next.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Humanizer.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\MailKit.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -125,7 +127,10 @@ D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.Identity
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\MimeKit.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\NETCore.MailKit.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -153,6 +158,10 @@ D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\runtimes\win\lib\n
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\PMS.Service.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\PMS.Storage.dll
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\PMS.Service.pdb
+D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\PMS.Storage.pdb
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.csproj.AssemblyReference.cache
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.GeneratedMSBuildEditorConfig.editorconfig
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.AssemblyInfoInputs.cache
@@ -174,8 +183,3 @@ D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\refint\PMS.API.dll
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.pdb
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\PMS.API.genruntimeconfig.cache
 D:\Desktop\MyProduct\Product\PMS.API\PMS.API\obj\Debug\net6.0\ref\PMS.API.dll
-D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\MailKit.dll
-D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\MimeKit.dll
-D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\NETCore.MailKit.dll
-D:\Desktop\MyProduct\Product\PMS.API\PMS.API\bin\Debug\net6.0\BouncyCastle.Crypto.dll

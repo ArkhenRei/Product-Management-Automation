@@ -758,6 +758,7 @@
       },
       "PMS.Service/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.22",
           "PMS.Storage": "1.0.0"
         },
         "runtime": {

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "WvXUiGqXjAITOMdChjgcMRX2SacshhH2A5ozlz4sZZj3LeWU6LOS9w9foEa8cwmu0pouzGtyNX490lgE89V3yA==",
+  "dgSpecHash": "51yVq5Ye92uCH20xFDG1HTzfNKPgL2f8wvzixJe/gVn6QxSQYzxaquJY3rsBo/NDEFiBT4+/tzFwJDKFs3AtHQ==",
   "success": true,
   "projectFilePath": "D:\\Desktop\\MyProduct\\Product\\PMS.Service\\PMS.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\canit\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\canit\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\canit\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
+    "C:\\Users\\canit\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.22\\microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
     "C:\\Users\\canit\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\canit\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\canit\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

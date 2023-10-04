@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PMS.API.Data;
 using PMS.API.Models;
 using PMS.Service.Services;
 

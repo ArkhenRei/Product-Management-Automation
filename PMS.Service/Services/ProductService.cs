@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PMS.API.Data;
 using PMS.API.Models;
 
@@ -45,14 +46,14 @@ namespace PMS.Service.Services
             return product;
         }
 
-        public async Task<Product> UpdateProduct(Guid id, Product updateProduct)
+        public async Task<Product> UpdateProduct([FromBody]Guid id, Product updateProductRequest)
         {
             var product = await _context.Products.FindAsync(id);
 
-            product.Name = updateProduct.Name;
-            product.Type = updateProduct.Type;
-            product.Color = updateProduct.Color;
-            product.Price = updateProduct.Price;
+            product.Name = updateProductRequest.Name;
+            product.Type = updateProductRequest.Type;
+            product.Color = updateProductRequest.Color;
+            product.Price = updateProductRequest.Price;
 
             await _context.SaveChangesAsync();
             return product;

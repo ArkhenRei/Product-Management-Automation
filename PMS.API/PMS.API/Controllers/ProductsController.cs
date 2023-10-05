@@ -44,9 +44,9 @@ namespace PMS.API.Controllers
         }
 
         [HttpPut("update-product")] //fix frontend toute
-        public async Task<IActionResult> UpdateProduct(Guid id, Product updateProduct)
+        public async Task<IActionResult> UpdateProduct(Guid id, Product updateProductRequest)
         {
-            var result = await _productService.UpdateProduct(id, updateProduct);
+            var result = await _productService.UpdateProduct(id, updateProductRequest);
 
             if(result == null)
             {

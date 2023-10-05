@@ -1,9 +1,5 @@
-﻿using PMS.API.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using PMS.API.Models;
 
 namespace PMS.Service.Services
 {
@@ -12,7 +8,7 @@ namespace PMS.Service.Services
         Task<List<Product>> GetAllProducts();
         Task<Product> AddProduct(Product product);
         Task<Product> GetProduct(Guid id);
-        Task<Product> UpdateProduct(Guid id, Product updateProduct);
+        Task<Product> UpdateProduct([FromBody]Guid id, Product updateProductRequest); 
         Task<Product> DeleteProduct(Guid id);
     }
 }

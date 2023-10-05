@@ -12,20 +12,20 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseApiUrl + '/api/products');
+    return this.http.get<Product[]>(this.baseApiUrl + '/api/Products/get-all-products');
   }
 
   addProduct(newProduct : Product): Observable<Product>{
     newProduct.id = '00000000-0000-0000-0000-000000000000';
-    return this.http.post<Product>(this.baseApiUrl + "/api/products", newProduct);
+    return this.http.post<Product>(this.baseApiUrl + "/api/products/add-product", newProduct);
   }
 
   getProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(this.baseApiUrl + '/api/products/' + id);
+    return this.http.get<Product>(this.baseApiUrl + '/api/products/get-product-by-id?id=' + id);
   }
 
   updateProduct(id: string, updateProductRequest: Product): Observable<Product> {
-    return this.http.put<Product>(this.baseApiUrl + '/api/products/' + id, updateProductRequest);
+    return this.http.put<Product>(this.baseApiUrl + '/api/products/update-product?id=' + id, updateProductRequest);
   }
 
   deleteProduct(id: string): Observable<Product> {

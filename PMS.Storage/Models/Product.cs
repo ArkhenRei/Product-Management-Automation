@@ -1,8 +1,10 @@
-﻿namespace PMS.API.Models
+﻿using PMS.Storage.Models;
+
+namespace PMS.API.Models
 {
-    public class Product
+    public class Product : BaseEntity<Guid>
     {
-        public Guid Id { get; set; }
+        public override Guid Id { get => base.Id; set => base.Id = Guid.NewGuid(); }
         public string? Name { get; set; }
         public string? Type { get; set; }
         public string? Color { get; set; }

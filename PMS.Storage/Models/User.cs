@@ -1,11 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PMS.Storage.Models;
 
 namespace PMS.API.Models
 {
-    public class User
+    public class User : BaseEntity<int>
     {
-        [Key]
-        public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Username { get; set; }

@@ -1,61 +1,58 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PMS.API.Data;
 using PMS.API.Models;
+using PMS.Storage.Repository;
 
 namespace PMS.Service.Services
 {
     public class ProductService : IProductService
     {
-        private readonly PMSDbContext _context;
+        private readonly IGenericRepository<Product, Guid> _repository;
+        
 
-        public ProductService(PMSDbContext context)
+        public ProductService(IGenericRepository<Product, Guid> genericRepository)
         {
-            _context = context;
+            _repository = genericRepository;           
         }   
 
         public async Task<Product> AddProduct(Product product)
         {
-            product.Id = Guid.NewGuid();
+            //product.Id = Guid.NewGuid();
 
-            await _context.Products.AddAsync(product);
-            await _context.SaveChangesAsync();
+            product = await _repository.InsertAsync(product);
+            await _repository.SaveChangesAsync();
             return product;
         }
 
-        public async Task<Product> DeleteProduct(Guid id)
+        public async Task DeleteProduct(Guid id)
         {
-            var product = await _context.Products.FindAsync(id);
-            
-            _context.Products.Remove(product);           
-            await _context.SaveChangesAsync();
-
-            return product;
+            await _repository.DeleteAsync(id);
+            await _repository.SaveChangesAsync();
         }
 
         public async Task<List<Product>> GetAllProducts()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _repository.GetAllAsync();
             return products;
             
         }
 
         public async Task<Product> GetProduct(Guid id)
         {
-            var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
+            var product = await _repository.GetByIdAsync(id);
+            //var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
             return product;
         }
 
         public async Task<Product> UpdateProduct([FromBody]Guid id, Product updateProductRequest)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _repository.GetByIdAsync(id);
 
             product.Name = updateProductRequest.Name;
             product.Type = updateProductRequest.Type;
             product.Color = updateProductRequest.Color;
             product.Price = updateProductRequest.Price;
 
-            await _context.SaveChangesAsync();
+            await _repository.SaveChangesAsync();
             return product;
         }
     }

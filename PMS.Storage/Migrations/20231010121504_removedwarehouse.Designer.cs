@@ -12,8 +12,8 @@ using PMS.API.Data;
 namespace PMS.API.Migrations
 {
     [DbContext(typeof(PMSDbContext))]
-    [Migration("20231003084806_addwarehouse")]
-    partial class addwarehouse
+    [Migration("20231010121504_removedwarehouse")]
+    partial class removedwarehouse
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,43 +46,6 @@ namespace PMS.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("PMS.API.Models.Warehouse", b =>
-                {
-                    b.Property<Guid>("WarehouseId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Capacity")
-                        .HasColumnType("int");
-
-                    b.Property<string>("WarehouseName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("WarehouseId");
-
-                    b.ToTable("Warehouses");
-                });
-
-            modelBuilder.Entity("PMS.API.Models.WarehouseProduct", b =>
-                {
-                    b.Property<Guid>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("InOrOut")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("WarehouseId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("ProductId");
-
-                    b.ToTable("WarehouseProducts");
                 });
 #pragma warning restore 612, 618
         }

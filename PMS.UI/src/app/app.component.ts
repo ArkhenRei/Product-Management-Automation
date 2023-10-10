@@ -16,11 +16,13 @@ export class AppComponent implements OnInit{
   public fullName : string = "";
   public role : string = "";
   public showHeader: boolean = true;
+  emailToReset!: string;
+  emailToken!: string;
 
   constructor(private auth: AuthService, private userStore: UserStoreService, private router: Router){
     router.events.subscribe((val)=>{
       if(val instanceof NavigationEnd){
-        if(val.url == '/' || val.url == '/login'){
+        if(val.url == '/' || val.url == '/login' || val.url == '/signup' || val.url == '/reset?email='){
           this.showHeader = false;
         }
         else{

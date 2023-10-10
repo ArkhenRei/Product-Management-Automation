@@ -8,9 +8,5 @@ namespace PMS.API.Data
         public PMSDbContext(DbContextOptions<PMSDbContext> options) : base(options) { }
 
         public DbSet<Product> Products { get; set; }
-
-        public DbSet<Warehouse> Warehouses { get; set; }
-
-        public DbSet<WarehouseProduct> WarehouseProducts { get; set; }
     }
 }

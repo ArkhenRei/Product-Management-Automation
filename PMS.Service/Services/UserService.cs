@@ -231,6 +231,11 @@ namespace PMS.Service.Services
             {
                 throw new Exception("Invalid reset link");
             }
+
+            var pass = CheckPasswrodStrength(resetPasswordDto.NewPassword);
+            if (!string.IsNullOrEmpty(pass))
+                throw new Exception(pass.ToString());
+
             user.Password = PasswordHasher.HashPassword(resetPasswordDto.NewPassword);
             _authContext.Entry(user).State = EntityState.Modified;
             await _authContext.SaveChangesAsync();

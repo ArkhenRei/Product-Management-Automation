@@ -9,6 +9,7 @@ namespace PMS.API.Models
         public string? Type { get; set; }
         public string? Color { get; set; }
         public decimal Price { get; set; }
+        public int Stock { get; set; }
         public ICollection<Warehouse> Warehouse { get; } = new List<Warehouse>();
     }
 }   

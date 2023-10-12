@@ -9,7 +9,7 @@ namespace PMS.Service.Services
         Task<Warehouse> AddWarehouse(Warehouse warehouse);
         Task<Warehouse> UpdateWarehouse(int id, Warehouse updateWarehouse);
         Task DeleteWarehouse(int id);
-        ProductWarehouse AddProductToWarehouse(int warehouseId, Guid productId);
-        void RemoveProduct(int warehouseId, Guid productId);
+        Task<ProductWarehouse> AddProductToWarehouse(int warehouseId, Guid productId, int quantity);
+        void RemoveProduct(int warehouseId, Guid productId, int quantity);
     }
 }

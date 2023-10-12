@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PMS.API.Data;
 using PMS.Service.Services;
 using PMS.Storage.Models;
 
@@ -11,12 +9,10 @@ namespace PMS.API.Controllers
     public class WarehouseController : ControllerBase
     {
         private readonly IWarehouseService _warehouseService;
-        private readonly PMSDbContext _pmsDbContext;
 
-        public WarehouseController(IWarehouseService warehouseService, PMSDbContext pMSDbContext)
+        public WarehouseController(IWarehouseService warehouseService)
         {
             _warehouseService = warehouseService;
-            _pmsDbContext = pMSDbContext;
         }
 
         [HttpPost("add-warehouse")]
@@ -31,17 +27,17 @@ namespace PMS.API.Controllers
             await _warehouseService.DeleteWarehouse(id);
         }
         [HttpPost("add-product/{warehouseId}/{productId}")]
-        public IActionResult AddProductToWarehouse(int warehouseId, Guid productId)
+        public async Task<IActionResult> AddProductToWarehouse(int warehouseId, Guid productId, int quantity)
         {
-            var warehouse = _warehouseService.AddProductToWarehouse(warehouseId, productId);
+            var warehouse = await _warehouseService.AddProductToWarehouse(warehouseId, productId, quantity);
 
             return Ok(warehouse);
         }
 
         [HttpPost("remove-product/{warehouseId}/{productId}")]
-        public void RemoveProduct(int warehouseId, Guid productId)
+        public void RemoveProduct(int warehouseId, Guid productId, int quantity)
         {
-            _warehouseService.RemoveProduct(warehouseId, productId);
+            _warehouseService.RemoveProduct(warehouseId, productId, quantity);
         }
     }
 }

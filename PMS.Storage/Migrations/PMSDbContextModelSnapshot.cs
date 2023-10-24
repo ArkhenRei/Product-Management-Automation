@@ -56,6 +56,9 @@ namespace PMS.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Enum")
+                        .HasColumnType("int");
+
                     b.Property<Guid>("ProductsId")
                         .HasColumnType("uniqueidentifier");
 

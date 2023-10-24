@@ -128,11 +128,15 @@ namespace PMS.Service.Services
                             _pmsDbContext.ProductWarehouses.Remove(warehouseProduct);
                             _pmsDbContext.SaveChanges();
                         }
+                        warehouseProduct.Enum = InOrOutEnum.Out;
+                        _pmsDbContext.SaveChanges();
                     }
                     else
                     {
                         quantity -= warehouseProduct.Quantity;
                         warehouseProduct.Quantity = 0;
+                        warehouseProduct.Enum = InOrOutEnum.Out;
+                        _pmsDbContext.SaveChanges();
 
                         // Delete the warehouse product if its quantity is now zero.
                         _pmsDbContext.ProductWarehouses.Remove(warehouseProduct);

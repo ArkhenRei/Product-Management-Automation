@@ -9,6 +9,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { WarehouseComponent } from './components/warehouse/warehouse.component';
+import { WarehouseListComponent } from './components/Warehouse-List/Warehouse-List.component';
+import { ReportsComponent } from './components/reports/reports.component';
 
 const routes: Routes = [
   {
@@ -51,6 +53,14 @@ const routes: Routes = [
   {
     path: 'warehouse',
     component: WarehouseComponent
+  },
+  {
+    path: 'warehouse-list',
+    component: WarehouseListComponent
+  },
+  {
+    path: 'reports',
+    component: ReportsComponent
   }
 ];
 

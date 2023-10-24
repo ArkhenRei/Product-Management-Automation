@@ -14,6 +14,9 @@ import { NgToastModule } from 'ng-angular-popup';
 import { TokenInterceptor } from './Interceptors/token.interceptor';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { WarehouseComponent } from './components/warehouse/warehouse.component';
+import { WarehouseListComponent } from './components/Warehouse-List/Warehouse-List.component';
+import { ReportsComponent } from './components/reports/reports.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SignupComponent,
     DashboardComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    WarehouseComponent,
+    WarehouseListComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,

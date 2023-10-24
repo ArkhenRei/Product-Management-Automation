@@ -13,6 +13,7 @@ namespace PMS.API.Controllers
         public ProductsController(IProductService productService)
         {
             _productService = productService;
+
         }
 
 
@@ -30,7 +31,7 @@ namespace PMS.API.Controllers
             return Ok(result);
         }
         
-        [HttpGet("get-product-by-id")] //fix frontend route
+        [HttpGet("get-product-by-id")] 
         public async Task<IActionResult> GetProduct(Guid id)
         {
             var result = await _productService.GetProduct(id);
@@ -43,31 +44,23 @@ namespace PMS.API.Controllers
             return Ok(result);
         }
 
-        [HttpPut("update-product")] //fix frontend toute
+        [HttpPut("update-product")] 
         public async Task<IActionResult> UpdateProduct(Guid id, Product updateProductRequest)
         {
             var result = await _productService.UpdateProduct(id, updateProductRequest);
 
-            if(result == null)
+            if (result == null)
             {
                 return NotFound();
             }
-
             return Ok(result);
         }
 
         [HttpDelete]
         //[Route("{id:Guid}")]
-        public async Task<IActionResult> DeleteProduct(Guid id)
+        public async Task DeleteProduct(Guid id)
         {
-            var result = await _productService.DeleteProduct(id);
-
-            if(result == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(result);
+            await _productService.DeleteProduct(id);
         }
     }
 }

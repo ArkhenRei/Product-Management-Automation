@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using PMS.API.Data;
 using PMS.API.Models;
 using PMS.API.UtilityService;
 using PMS.Service.Services;
+using PMS.Storage.Repository;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,10 +36,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IWarehouseProductService, WarehouseProductService>();
-builder.Services.AddScoped<IWarehouseService, WarehouseService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IWarehouseService, WarehouseService>();
+builder.Services.AddScoped<IProductWarehouseService, ProductWarehouseService>();
+builder.Services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
 
 builder.Services.AddAuthentication(x =>
 {

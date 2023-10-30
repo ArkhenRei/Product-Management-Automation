@@ -12,17 +12,18 @@ In this automation users can:
 - List how many products in which warehouse
 - Create accounts and login
 - Change password
-
-![Login screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/24ca3701-8621-4909-b356-5f95f0246870)
-
-![add product screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/a0c7ee9e-e1a2-419b-b40d-24c2351864ad)
-
-![product list screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/c6257867-10ff-46d7-83bc-06599a5017d8)
-
-![product edit screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/f345db57-08ce-4509-b1c2-ad6c4e55615d)
-
-![add product to warehouse screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/84efe5bf-634f-44dd-9682-028c1ced3701)
-
-![warehouse list screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/44b50e96-a075-4302-8bc9-d63b332b2875)
-
-![added products screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/10a8c3fe-d45c-4577-8ae8-76426b60d0d7)
+---
+## Login page
+![Login screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/03f8b5a9-fdd6-49f0-a928-51ed27e7b135)
+## Create product page
+![add product screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/b51b1b10-6d13-4693-8ff9-a9c65d82ca07)
+## List of created products
+![product list screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/30226502-50bf-4320-88f5-3a5a0eff2c12)
+## Edit product page
+![product edit screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/787d29c9-aa18-46fa-988e-b697435a1a64)
+## Add product to warehouse page
+![add product to warehouse screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/7fb8516f-c1a8-4fdd-914b-cdc2b93b8973)
+## List of warehouses
+![warehouse list screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/d7acbdfb-7cec-467b-b789-b81ead38cc53)
+## List of products added to warehouses
+![added products screen](https://github.com/ArkhenRei/Product-Management-Automation/assets/40789520/0a613a3e-1850-4447-9a47-7e6fecffb8ee)

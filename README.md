@@ -1,5 +1,5 @@
 # Product Management Automation
-This project is a product management automation. I developed this project in my internship using .NET 6 and Angular 16.
+This project is a product management automation. I developed this project during my internship using .NET 6 and Angular 16.
 
 In this automation users can:
 - Create products with name, type, color and price.
